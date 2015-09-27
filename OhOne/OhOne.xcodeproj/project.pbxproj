@@ -128,6 +128,12 @@
 		428B36AF1B90A75E006570D8 /* contBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428B36AE1B90A75E006570D8 /* contBack@2x.png */; };
 		428B36B31B90B0A6006570D8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 428B36B21B90B0A6006570D8 /* Utils.m */; };
 		429B4BC01B876D7D00C20556 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B4BBF1B876D7D00C20556 /* MainTabBarController.m */; };
+		42B1D4B01BB7D06800D9041C /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1D4AA1BB7D06800D9041C /* AppIcon29x29@2x.png */; settings = {ASSET_TAGS = (); }; };
+		42B1D4B11BB7D06800D9041C /* AppIcon29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1D4AB1BB7D06800D9041C /* AppIcon29x29@3x.png */; settings = {ASSET_TAGS = (); }; };
+		42B1D4B21BB7D06800D9041C /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1D4AC1BB7D06800D9041C /* AppIcon40x40@2x.png */; settings = {ASSET_TAGS = (); }; };
+		42B1D4B31BB7D06800D9041C /* AppIcon40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1D4AD1BB7D06800D9041C /* AppIcon40x40@3x.png */; settings = {ASSET_TAGS = (); }; };
+		42B1D4B41BB7D06800D9041C /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1D4AE1BB7D06800D9041C /* AppIcon60x60@2x.png */; settings = {ASSET_TAGS = (); }; };
+		42B1D4B51BB7D06800D9041C /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1D4AF1BB7D06800D9041C /* AppIcon60x60@3x.png */; settings = {ASSET_TAGS = (); }; };
 		42BCDAE31B848DE0009B689B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDAE21B848DE0009B689B /* main.m */; };
 		42BCDAE61B848DE0009B689B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDAE51B848DE0009B689B /* AppDelegate.m */; };
 		42BCDAEE1B848DE0009B689B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42BCDAED1B848DE0009B689B /* Images.xcassets */; };
@@ -351,6 +357,12 @@
 		428B36B21B90B0A6006570D8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		429B4BBE1B876D7D00C20556 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		429B4BBF1B876D7D00C20556 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		42B1D4AA1BB7D06800D9041C /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		42B1D4AB1BB7D06800D9041C /* AppIcon29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@3x.png"; sourceTree = "<group>"; };
+		42B1D4AC1BB7D06800D9041C /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		42B1D4AD1BB7D06800D9041C /* AppIcon40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@3x.png"; sourceTree = "<group>"; };
+		42B1D4AE1BB7D06800D9041C /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		42B1D4AF1BB7D06800D9041C /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
 		42BCDADD1B848DE0009B689B /* OhOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BCDAE11B848DE0009B689B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42BCDAE21B848DE0009B689B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -944,6 +956,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		42B1D4A91BB7D06800D9041C /* myicons */ = {
+			isa = PBXGroup;
+			children = (
+				42B1D4AA1BB7D06800D9041C /* AppIcon29x29@2x.png */,
+				42B1D4AB1BB7D06800D9041C /* AppIcon29x29@3x.png */,
+				42B1D4AC1BB7D06800D9041C /* AppIcon40x40@2x.png */,
+				42B1D4AD1BB7D06800D9041C /* AppIcon40x40@3x.png */,
+				42B1D4AE1BB7D06800D9041C /* AppIcon60x60@2x.png */,
+				42B1D4AF1BB7D06800D9041C /* AppIcon60x60@3x.png */,
+			);
+			path = myicons;
+			sourceTree = "<group>";
+		};
 		42BCDAD41B848DE0009B689B = {
 			isa = PBXGroup;
 			children = (
@@ -990,6 +1015,7 @@
 		42BCDAE01B848DE0009B689B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42B1D4A91BB7D06800D9041C /* myicons */,
 				2F705F691BA0175F0098A247 /* Icon.png */,
 				2FE602CB1B9AC6C000809DF4 /* Question */,
 				428B36AD1B90A73B006570D8 /* home */,
@@ -1131,11 +1157,12 @@
 		42BCDAD51B848DE0009B689B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = hyrMac;
 				TargetAttributes = {
 					42BCDADC1B848DE0009B689B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 4RE86257QJ;
 					};
 					42BCDAF51B848DE0009B689B = {
 						CreatedOnToolsVersion = 6.3;
@@ -1171,8 +1198,10 @@
 				425A0B331B883F980033B22A /* content_iPad@2x.png in Resources */,
 				2F9825711B8B365D0008BC5D /* share_save_iPad@2x.png in Resources */,
 				2FE602D21B9AC6DC00809DF4 /* que_line_nt.png in Resources */,
+				42B1D4B31BB7D06800D9041C /* AppIcon40x40@3x.png in Resources */,
 				2FE602D71B9AC6EE00809DF4 /* ans_img.png in Resources */,
 				2F705F631BA000EA0098A247 /* UMSLoginViewController.xib in Resources */,
+				42B1D4B11BB7D06800D9041C /* AppIcon29x29@3x.png in Resources */,
 				2F9825471B8B2FB60008BC5D /* share_sina_iPad@2x.png in Resources */,
 				2F9825751B8B36750008BC5D /* share_font_iPad@2x.png in Resources */,
 				2FE602D11B9AC6DC00809DF4 /* que_img.png in Resources */,
@@ -1203,10 +1232,13 @@
 				2F74BD9E1BA2F89B00A976D4 /* launch_image640x960.png in Resources */,
 				2F705F611BA000EA0098A247 /* UMShareEditViewController.xib in Resources */,
 				425A0B3A1B883F980033B22A /* personal_iPad@2x.png in Resources */,
+				42B1D4B21BB7D06800D9041C /* AppIcon40x40@2x.png in Resources */,
 				425A0B3F1B883F980033B22A /* questionSelected@3x.png in Resources */,
+				42B1D4B01BB7D06800D9041C /* AppIcon29x29@2x.png in Resources */,
 				2F705F651BA000EA0098A247 /* UMSShareListController.xib in Resources */,
 				2F9825681B8B36410008BC5D /* share_col@2x.png in Resources */,
 				2FE602D61B9AC6EE00809DF4 /* ans_img_iPad.png in Resources */,
+				42B1D4B51BB7D06800D9041C /* AppIcon60x60@3x.png in Resources */,
 				428B36AF1B90A75E006570D8 /* contBack@2x.png in Resources */,
 				425A0B3E1B883F980033B22A /* question_iPad@2x.png in Resources */,
 				2F9825481B8B2FB60008BC5D /* share_sina@2x.png in Resources */,
@@ -1233,6 +1265,7 @@
 				2F9825721B8B365D0008BC5D /* share_save@2x.png in Resources */,
 				2FE602D01B9AC6DC00809DF4 /* que_img_iPad.png in Resources */,
 				425A0B391B883F980033B22A /* personal_hl_iPad@2x.png in Resources */,
+				42B1D4B41BB7D06800D9041C /* AppIcon60x60@2x.png in Resources */,
 				2F98254B1B8B2FB60008BC5D /* share_tc_iPad@2x.png in Resources */,
 				2F9825521B8B2FB60008BC5D /* share_timelineH@2x.png in Resources */,
 				425A0B321B883F980033B22A /* content_hl_iPad@2x.png in Resources */,
@@ -1401,6 +1434,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1416,7 +1450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1453,7 +1487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1464,7 +1498,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (2MYS7CM746)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OhOne/One_PrefixHeader.pch";
 				INFOPLIST_FILE = OhOne/Info.plist;
@@ -1474,7 +1509,9 @@
 					"$(PROJECT_DIR)/OhOne/UMSocial_Sdk_4.2.3",
 					"$(PROJECT_DIR)/OhOne/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hyr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1482,7 +1519,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (2MYS7CM746)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OhOne/One_PrefixHeader.pch";
 				INFOPLIST_FILE = OhOne/Info.plist;
@@ -1492,7 +1530,9 @@
 					"$(PROJECT_DIR)/OhOne/UMSocial_Sdk_4.2.3",
 					"$(PROJECT_DIR)/OhOne/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hyr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1510,6 +1550,7 @@
 				);
 				INFOPLIST_FILE = OhOneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hyr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OhOne.app/OhOne";
 			};
@@ -1525,6 +1566,7 @@
 				);
 				INFOPLIST_FILE = OhOneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hyr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OhOne.app/OhOne";
 			};
