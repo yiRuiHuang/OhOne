@@ -57,14 +57,14 @@
     
 
     NSArray *dateArray = [_model.strTm componentsSeparatedByString:@"-"];
-    NSLog(@"dateArray : %@",dateArray);
+//    NSLog(@"dateArray : %@",dateArray);
     NSDictionary *dataChange = @{@"01":@"January",  @"02":@"February",
                                  @"03":@"March",    @"04":@"April",
                                  @"05":@"May",      @"06":@"June",
                                  @"07":@"July",     @"08":@"August",
                                  @"09":@"September",@"10":@"October",
                                  @"11":@"November", @"12":@"December"};
-    NSLog(@"%@",dataChange[dateArray[1]]);
+//    NSLog(@"%@",dataChange[dateArray[1]]);
     _dateLabel.frame = CGRectMake(8, 15, kWidth-8, 30);
     _dateLabel.font = [UIFont boldSystemFontOfSize:16];
     _dateLabel.textColor = [UIColor darkGrayColor];

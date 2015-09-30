@@ -75,7 +75,7 @@
     
     
     NSArray *dateArray = [_model.strQuestionMarketTime componentsSeparatedByString:@"-"];
-    NSLog(@"dateArray : %@",dateArray);
+//    NSLog(@"dateArray : %@",dateArray);
     NSDictionary *dataChange = @{@"01":@"January",  @"02":@"February",
                                  @"03":@"March",    @"04":@"April",
                                  @"05":@"May",      @"06":@"June",

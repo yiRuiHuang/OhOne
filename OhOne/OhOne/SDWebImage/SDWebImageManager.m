@@ -143,7 +143,7 @@
 
     @synchronized (self.runningOperations) {
         [self.runningOperations addObject:operation];
-    }             
+    }
     NSString *key = [self cacheKeyForURL:url];
 
     operation.cacheOperation = [self.imageCache queryDiskCacheForKey:key done:^(UIImage *image, SDImageCacheType cacheType) {

@@ -12,6 +12,7 @@
 #import "HttpDataService.h"
 #import "HomeModel.h"
 #import "HomeView.h"
+
 #import "iCarousel.h"
 #import "HTTPTool.h"
 #import "UMSocial.h"
@@ -106,7 +107,20 @@
     } else {
         homeView = (HomeView *)view.subviews[0];
     }
-
+    
+    //remember to always set any properties of your carousel item
+    //views outside of the `if (view == nil) {...}` check otherwise
+    //you'll get weird issues with carousel item content appearing
+    //in the wrong place in the carousel
+    
+//    if (index == numberOfItems - 1 || index == readItems.allKeys.count) {// 当前这个 item 是没有展示过的
+////        [homeView refreshSubviewsForNewItem];
+//    } else {// 当前这个 item 是展示过了但是没有显示过数据的
+//        lastConfigureViewForItemIndex = MAX(index, lastConfigureViewForItemIndex);
+////        [homeView configureViewWithHomeEntity:readItems[[@(index) stringValue]] animated:YES];
+//        homeView.model = readItems[[@(index) stringValue]];
+//
+//    }
     homeView.model = readItems[[@(index) stringValue]];
     
     
@@ -124,50 +138,38 @@
     NSInteger index = MAX(0, _carousel.currentItemIndex)+1;
     
     [self requestHomeContentAtIndex:index];
-    
+//    [items insertObject:@(_carousel.numberOfItems) atIndex:(NSUInteger)index];
     [_carousel insertItemAtIndex:index animated:YES];
 }
 
 #pragma mark -
-//- (void)carouselDidScroll:(iCarousel *)carousel {
-//    
-////    NSLog(@"%f",carousel.scrollOffset);
-//    
-//    
-//    
-//}
-
-- (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate {
+- (void)carouselDidScroll:(iCarousel *)carousel {
     
-    if (carousel.scrollOffset < 0 ) {
+//    NSLog(@"%f",carousel.scrollOffset);
+    if (carousel.scrollOffset >= 0.35) {
         
         
-        [self showTextOnly];
+        [self insertItem];
         
     }
-    
-    if (carousel.scrollOffset+1 > readItems.allKeys.count)
-        if (carousel.scrollOffset >= (0.35+readItems.allKeys.count-1)) {
-            
-            [self insertItem];
-            
-        }
     
 }
 
 
-
-
-
-
 #pragma mark - Network Requests
+
+// 右拉刷新
+- (void)refreshing {
+    if (readItems.allKeys.count > 0) {// 避免第一个还未加载的时候右拉刷新更新数据
+//        [self showHUDWithText:@""];
+        isRefreshing = YES;
+        [self requestHomeContentAtIndex:0];
+    }
+}
 
 - (void)requestHomeContentAtIndex:(NSInteger)index {
 
-    __weak HomeViewController *weakSelf = self;
     [HTTPTool requestHomeContentByIndex:index success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        __strong HomeViewController *strongSelf = weakSelf;
         
 //        NSLog(@"%@",responseObject[@"hpEntity"]);
         NSDictionary *hpEntity = responseObject[@"hpEntity"];
@@ -179,7 +181,7 @@
         [readItems setObject:model forKey:[@(index) stringValue]];
         
 //        [_carousel reloadItemAtIndex:index animated:YES];
-        [strongSelf->_carousel reloadData];
+        [_carousel reloadData];
         
     } failBlock:^(AFHTTPRequestOperation *operation, NSError *error) {
         

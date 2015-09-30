@@ -122,35 +122,16 @@
 }
 
 #pragma mark -
-//- (void)carouselDidScroll:(iCarousel *)carousel {
-//    
-////    NSLog(@"%f",carousel.scrollOffset);
-//    if (carousel.scrollOffset+1 > readItems.allKeys.count)
-//    if (carousel.scrollOffset >= (0.35+readItems.allKeys.count-1)) {
-//        
-//        
-//        [self insertItems];
-//        
-//    }
-//    //    NSLog(@"count:%ld",readItems.allKeys.count);
-//    
-//}
-
-- (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate {
+- (void)carouselDidScroll:(iCarousel *)carousel {
     
-    if (carousel.scrollOffset < 0 ) {
+//    NSLog(@"%f",carousel.scrollOffset);
+    if (carousel.scrollOffset >= 0.35) {
         
         
-        [self showTextOnly];
+        [self insertItems];
         
     }
-    
-    if (carousel.scrollOffset+1 > readItems.allKeys.count)
-        if (carousel.scrollOffset >= (0.35+readItems.allKeys.count-1)) {
-            
-            [self insertItems];
-            
-        }
+    //    NSLog(@"count:%ld",readItems.allKeys.count);
     
 }
 
@@ -167,10 +148,8 @@
 - (void)requestReadingContentAtIndex:(NSInteger)index {
 
     NSString *date = [BaseFunction stringDateBeforeTodaySeveralDays:index];
-    __weak ArticleViewController *weakSelf = self;
+    
     [HTTPTool requestReadingContentByDate:date lastUpdateDate:lastUpdateDate success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        __strong ArticleViewController *strongSelf = weakSelf;
         NSDictionary *entTg = responseObject[@"contentEntity"];
         
         ArticleModel *model = [[ArticleModel alloc] init];
@@ -181,7 +160,7 @@
         [readItems setObject:model forKey:[@(index) stringValue]];
         
         //        [_carousel reloadItemAtIndex:index animated:YES];
-        [strongSelf->_carousel reloadData];
+        [_carousel reloadData];
         
     } failBlock:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"fail");

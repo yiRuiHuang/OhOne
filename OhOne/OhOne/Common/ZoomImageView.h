@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @class ZoomImageView;
 @protocol ZoomImageViewDelegate <NSObject>
 @optional
@@ -30,7 +31,7 @@
 
 @property (nonatomic, weak) id<ZoomImageViewDelegate> delegate;
 
-//   gif图标
+//   git图标
 @property (nonatomic, strong)UIImageView *iconImageView;
 @property (nonatomic, assign)BOOL isGif;
 

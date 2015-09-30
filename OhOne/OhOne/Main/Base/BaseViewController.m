@@ -8,7 +8,6 @@
 
 #import "BaseViewController.h"
 #import "UIViewExt.h"
-#import "MBProgressHUD.h"
 
 @interface BaseViewController ()
 
@@ -64,23 +63,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - 左拉刷新，无更新提示
-
-- (void)showTextOnly {
-    
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    
-    // Configure for text only and offset down
-    hud.mode = MBProgressHUDModeText;
-    hud.labelText = @"已是最新内容";
-    hud.margin = 5.0f;
-    hud.yOffset = kHeight/2-69;
-    hud.removeFromSuperViewOnHide = YES;
-    
-    [hud hide:YES afterDelay:3];
-    NSLog(@"haufhdafahkjfkj");
 }
 
 

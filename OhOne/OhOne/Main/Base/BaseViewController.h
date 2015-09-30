@@ -20,7 +20,4 @@
 
 - (void)coverTapAction:(UIControl *)control;
 
-
-// 左拉刷新，无更新提示
-- (void)showTextOnly;
 @end
