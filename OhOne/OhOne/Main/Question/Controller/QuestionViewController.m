@@ -134,14 +134,33 @@
 }
 
 #pragma mark -
-- (void)carouselDidScroll:(iCarousel *)carousel {
+//- (void)carouselDidScroll:(iCarousel *)carousel {
+//    
+////    NSLog(@"%f",carousel.scrollOffset);
+//    if (carousel.scrollOffset >= (0.35+readItems.allKeys.count-1)) {
+//        
+//        
+//        [self insertItem];
+//        
+//    }
+//    
+//}
+
+- (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate {
     
-//    NSLog(@"%f",carousel.scrollOffset);
-    if (carousel.scrollOffset >= 0.35) {
+    if (carousel.scrollOffset < 0 ) {
         
-        [self insertItem];
+        
+        [self showTextOnly];
         
     }
+    
+    if (carousel.scrollOffset+1 > readItems.allKeys.count)
+        if (carousel.scrollOffset >= (0.35+readItems.allKeys.count-1)) {
+            
+            [self insertItem];
+            
+        }
     
 }
 
@@ -159,8 +178,10 @@
 
 - (void)requestHomeContentAtIndex:(NSInteger)index {
     NSString *date = [BaseFunction stringDateBeforeTodaySeveralDays:index];
-
+    __weak QuestionViewController *weakSelf = self;
     [HTTPTool requestQuestionContentByDate:date lastUpdateDate:lastUpdateDate success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        __strong QuestionViewController *strongSelf = weakSelf;
+        
         NSDictionary *entTg = responseObject[@"questionAdEntity"];
         
         QuestionModel *model = [[QuestionModel alloc] init];
@@ -171,7 +192,7 @@
         [readItems setObject:model forKey:[@(index) stringValue]];
         
         //        [_carousel reloadItemAtIndex:index animated:YES];
-        [_carousel reloadData];
+        [strongSelf->_carousel reloadData];
 
     } failBlock:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"fail");

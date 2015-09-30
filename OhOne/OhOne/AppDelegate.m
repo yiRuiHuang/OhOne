@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-//#import "MainTabBarController.h"
 #import "UMSocial.h"
 #import "LaunchViewController.h"
 
@@ -20,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [UMSocialData setAppKey:@"55e43631e0f55a942c001e09"];
-
+    [UMSocialData setAppKey:@"560b493fe0f55ae5270048b9"];//
+//55e43631e0f55a942c001e09
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

@@ -7,7 +7,6 @@
 //
 
 #import "ZoomImageView.h"
-//#import "UIImageView+WebCache.h"
 #import "DDProgressView.h"
 #import "MBProgressHUD.h"
 #import "UIImage+GIF.h"
@@ -161,7 +160,7 @@
         
         
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                              action:@selector(zoomOut)];
+                                                                                    action:@selector(zoomOut)];
         
         [_scrollView addGestureRecognizer:singleTap];
         
@@ -292,7 +291,7 @@
     //提示保存成功
     MBProgressHUD *hud = (__bridge MBProgressHUD *)(contextInfo);
     
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+//    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
     
     //显示模式改为：自定义视图模式
     hud.mode = MBProgressHUDModeCustomView;

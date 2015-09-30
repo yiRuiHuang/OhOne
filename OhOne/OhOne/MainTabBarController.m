@@ -111,22 +111,9 @@
     
     // 03 tabBar.subviews -> 按钮添加
     NSArray *buttonImageNames = @[@"home.png",@"reading.png",@"question.png",@"thing.png",@"person.png"];
-//    NSArray *buttonNames = @[@"home_iPad",@"content_iPad",@"question_iPad",@"things_iPad",@"personal_iPad"];
     
     NSArray *buttonHlImageNames = @[@"homeSelected.png",@"readingSelected.png",@"questionSelected.png",@"thingSelected.png",@"personSelected.png"];
-//    NSArray *buttonHlNames = @[@"home_hl_iPad",@"content_hl_iPad",@"question_hl_iPad",@"things_hl_iPad",@"person_hl_iPad.png"];
-    
-//    for (NSInteger i = 0; i < self.viewControllers.count; i++) {
-//        
-//        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i*tabBarButtonWidth, 0, tabBarButtonWidth, tabBarButtonHeight)];
-//        [button setImage:buttonImageNames[i] forState:UIControlStateNormal];
-//        [button setImage:buttonHlImageNames[i] forState:UIControlStateSelected];
-//        button.tag = i;
-//        [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.tabBar addSubview:button];
-//
-//    }
-//
+
 
     for (NSInteger i = 0; i < 5; i++) {
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i*tabBarButtonWidth, 0, tabBarButtonWidth, tabBarButtonHeight)];
